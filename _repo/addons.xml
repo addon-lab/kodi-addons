@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.10" provider-name="Carlos">
+<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.11" provider-name="Carlos">
   <requires>
     <import addon = "xbmc.python" version="2.1.0"/>
     <import addon = "script.module.urlresolver"/>
