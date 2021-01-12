@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.12" provider-name="Carlos">
+<addon id="script.module.web-pdb"
+       name="Web-PDB"
+       version="1.5.6"
+       provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.bottle" version="0.12.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Web-based remote Python debugger</summary>
+    <description lang="en_GB">Provides a web-UI for Python's built-in PDB debugger for remote debugging Kodi addons.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=292141</forum>
+    <source>https://github.com/romanvm/kodi.web-pdb</source>
+    <assets>
+      <icon>icon.png</icon>
+      <screenshot>resources/screenshot.jpg</screenshot>
+    </assets>
+    <news>- 1.5.6: Fixed not being able to assign a local variable via the debugger console.</news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.13" provider-name="Carlos">
   <requires>
     <import addon = "xbmc.python" version="2.1.0"/>
     <import addon = "script.module.web-pdb"/>
@@ -16,8 +43,19 @@
   </extension>
    <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="es">Primer plugin Carlos Fims</summary>
-    <description lang="es">Plugin que extrae peliculas de Gnula.nu </description>
+    <summary lang="es">Plugin video CarlosFilms</summary>
+    <disclaimer lang="es">[COLOR red]The owners and submitters to this addon do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.[/COLOR]</disclaimer>
+    <website>https://github.com/addon-lab/kodi-addons</website>
+    <description lang="es">Navega con Kodi por web Gnula.nu para ver sus videos de manera fácil.</description>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot1.jpg</screenshot>
+      <screenshot>resources/screenshot0.jpg</screenshot>
+      <screenshot>resources/screenshot2.jpg</screenshot>
+      <screenshot>resources/screenshot3.jpg</screenshot>
+    </assets>
+    <news>- 1.0.13:Inclusion nuevos resolver.Nuevas opciones,mejoras en codigo y actualizacion ciertas librerias.</news>
   </extension>
 </addon>
 
@@ -37,7 +75,7 @@
     </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.20" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.21" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
