@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="script.module.web-pdb"
+       name="Web-PDB"
+       version="1.5.6"
+       provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.bottle" version="0.12.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Web-based remote Python debugger</summary>
+    <description lang="en_GB">Provides a web-UI for Python's built-in PDB debugger for remote debugging Kodi addons.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=292141</forum>
+    <source>https://github.com/romanvm/kodi.web-pdb</source>
+    <assets>
+      <icon>icon.png</icon>
+      <screenshot>resources/screenshot.jpg</screenshot>
+    </assets>
+    <news>- 1.5.6: Fixed not being able to assign a local variable via the debugger console.</news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.16" provider-name="Carlos">
+  <requires>
+    <import addon = "xbmc.python" version="2.1.0"/>
+    <import addon = "script.module.web-pdb"/>
+    <import addon = "script.module.jsbeautifier"/>
+    <import addon = "script.module.requests"/>
+    <import addon = "script.module.resolveurl" version="5.0.38"/>
+    <import addon = "script.module.future" version="0.17.1"/>
+    <import addon = "script.module.simpleplugin3" version="3.0.4"/>
+    <import addon = "script.module.unidecode"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>video</provides>
+  </extension>
+   <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="es">Plugin video CarlosFilms</summary>
+    <disclaimer lang="es">[COLOR red]The owners and submitters to this addon do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.[/COLOR]</disclaimer>
+    <website>https://github.com/addon-lab/kodi-addons</website>
+    <description lang="es">Navega con Kodi por web Gnula.nu para ver sus videos de manera fácil.</description>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot1.jpg</screenshot>
+      <screenshot>resources/screenshot0.jpg</screenshot>
+      <screenshot>resources/screenshot2.jpg</screenshot>
+      <screenshot>resources/screenshot3.jpg</screenshot>
+    </assets>
+    <news>- 1.0.13:Inclusion nuevos resolver.Nuevas opciones,mejoras en codigo y actualizacion ciertas librerias.</news>
+  </extension>
+</addon>
+
+<addon id="script.module.jsbeautifier" name="jsbeautifier" version="1.8.8" provider-name="jsergio">
+    <requires>
+        <import addon="xbmc.python" version="2.14.0"/>
+        <import addon="script.module.six" version="1.6.1" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Written by Einar Lielmanis, maintained and evolved by Liam Newman.</summary>
+        <description>Beautify, unpack or deobfuscate JavaScript. Handles popular online obfuscators.</description>
+        <platform>all</platform>
+        <license>MIT</license>
+        <source>https://pypi.org/project/jsbeautifier/</source>
+        <website>https://beautifier.io/</website>
+    </extension>
+</addon>
+
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.21" provider-name="gujal">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
+        <import addon="plugin.googledrive" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
+        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+    <addon id="repo-kodi" name="Carlos Repo Kodi" version="1.0.1" provider-name="Carlos">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Carlos Repo Kodi">
+            <info compressed="false">https://raw.githubusercontent.com/addon-lab/kodi-addons/master/_repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/addon-lab/kodi-addons/master/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/addon-lab/kodi-addons/master/_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Repositorio para mis addon de Kodi</summary>
+            <description>Repositorio para mis addon de Kodi y plugin necesarios[CR] Addon: [CR]-CarlosTV.[CR]-CarlosFilms.</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.module.simpleplugin3"
+   name="SimplePlugin 3"
+   version="3.0.4"
+   provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.future" version="0.16.0.4"/>
+  </requires>
+  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">SimplePlugin micro-framework</summary>
+    <description lang="en_GB">SimplePlugin micro-framework that simplifies Kodi content plugin programming.</description>
+    <license>GPL-3.0-only</license>
+    <forum></forum>
+    <website>http://romanvm.github.io/script.module.simpleplugin</website>
+    <email>roman1972@gmail.com</email>
+    <source>https://github.com/romanvm/script.module.simpleplugin</source>
+  </extension>
+</addon>
+
+<addon id="script.module.urlresolver"
+     name="URLResolver"
+     version="2.10.0"
+     provider-name="Eldorado">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+    <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.carlostv" name="Carlos TV" version="1.0.4" provider-name="Carlos">
+  <requires>
+    <import addon = "xbmc.python" version="2.1.0"/>
+    <import addon = "script.module.urlresolver"/>
+    <import addon = "script.module.web-pdb"/>
+    <import addon = "script.module.beautifulsoup4"/>
+    <import addon = "script.module.jsbeautifier"/>
+    <import addon = "script.module.requests"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>video</provides>
+  </extension>
+   <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="es-es">primer plugin</summary>
+    <description lang="es-es">Plagin que extrae y desencripta la url del servidor de video de Latino web tv</description>
+  </extension>
+</addon>
+</addons>
