@@ -27,7 +27,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.16" provider-name="Carlos">
+<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.18" provider-name="Carlos">
   <requires>
     <import addon = "xbmc.python" version="2.1.0"/>
     <import addon = "script.module.web-pdb"/>
@@ -75,7 +75,7 @@
     </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.21" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.22" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
