@@ -27,7 +27,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.18" provider-name="Carlos">
+<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.19" provider-name="Carlos">
   <requires>
     <import addon = "xbmc.python" version="2.1.0"/>
     <import addon = "script.module.web-pdb"/>
@@ -55,7 +55,7 @@
       <screenshot>resources/screenshot2.jpg</screenshot>
       <screenshot>resources/screenshot3.jpg</screenshot>
     </assets>
-    <news>- 1.0.13:Inclusion nuevos resolver.Nuevas opciones,mejoras en codigo y actualizacion ciertas librerias.</news>
+    <news>- 1.0.19:Mejora en funciones y cache consiguiendo mayor agilidad en respuesta.</news>
   </extension>
 </addon>
 
@@ -75,7 +75,7 @@
     </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.22" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.23" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
