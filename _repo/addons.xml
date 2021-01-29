@@ -27,7 +27,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.19" provider-name="Carlos">
+<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.20" provider-name="Carlos">
   <requires>
     <import addon = "xbmc.python" version="2.1.0"/>
     <import addon = "script.module.web-pdb"/>
@@ -56,6 +56,7 @@
       <screenshot>resources/screenshot3.jpg</screenshot>
     </assets>
     <news>- 1.0.19:Mejora en funciones y cache consiguiendo mayor agilidad en respuesta.</news>
+    <news>- 1.0.20:Opcion de Peliculas al Azar.</news>
   </extension>
 </addon>
 
