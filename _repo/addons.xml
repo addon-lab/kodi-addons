@@ -27,10 +27,9 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.20" provider-name="Carlos">
+<addon id="plugin.video.carlosfilms" name="Carlos Films" version="1.0.21" provider-name="Carlos">
   <requires>
     <import addon = "xbmc.python" version="2.1.0"/>
-    <import addon = "script.module.web-pdb"/>
     <import addon = "script.module.jsbeautifier"/>
     <import addon = "script.module.requests"/>
     <import addon = "script.module.resolveurl" version="5.0.38"/>
